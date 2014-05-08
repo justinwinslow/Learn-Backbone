@@ -33,42 +33,44 @@ function($, _, Backbone, editTemplate, listTemplate) {
   });
 
   // Create an object for desparate views
-  User.view = {};
+  User.views = {};
 
   // Define module's primary view
-  User.view.Edit = Backbone.View.extend({
+  User.views.Edit = Backbone.View.extend({
     tagName: 'form',
     template: _.template(editTemplate),
     initialize: function(){
+      // Listen for the model to change and re-render the view html
       this.model.on('change', this.render, this);
     },
     render: function(){
+      // Most basic render function, just compile the template and add it to the
+      // view's el
       this.$el.html( this.template(this.model.toJSON()) );
 
       return this;
     },
-    saveMe: function(event){
+    doSomething: function(event){
       event.preventDefault();
-
-      console.log('save me');
-
+      console.log('doSomething');
     },
     events: {
-      'click button': 'saveMe'
+      'click button': 'doSomething'
     }
   });
 
-  User.view.List = Backbone.View.extend({
+  User.views.List = Backbone.View.extend({
     tagName: 'ul',
     template: _.template(listTemplate),
     initialize: function(){
+      // Listen for the model to change and re-render the view html
       this.collection.on('change', this.render, this);
-
-      Backbone.on('saveMe', function(){
-        console.log('List view heard save', arguments);
-      });
     },
     render: function(){
+      // This is one way of handling displaying a collection that has deficiencies
+      // There are robust examples on the internets for extending backbone's View to
+      // create a collection view
+      // If you are using Marionette you get this junk out of the box
       this.$el.empty();
 
       this.collection.each(function(model){

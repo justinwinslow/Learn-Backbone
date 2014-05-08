@@ -45,20 +45,23 @@ require(
     'user'
   ],
   function ($, _, Backbone, User) {
-    var myApp = {};
-
+    // Create a collection of users
     var myUsers = new User.Collection(users);
 
-    var myUser = myUsers.findWhere({id: 0});
+    // Find the current user in the collection
+    var myUser = myUsers.findWhere({id: currentUserId});
 
-    var userEditView = new User.view.Edit({model: myUser});
-    var userListView = new User.view.List({collection: myUsers});
+    // Create views
+    var userEditView = new User.views.Edit({model: myUser});
+    var userListView = new User.views.List({collection: myUsers});
 
+    // Render views and add them to the DOM
     userEditView.render();
     $('body').append(userEditView.$el);
     userListView.render();
     $('body').append(userListView.$el);
 
+    // Change some data to show how the views update
     setTimeout(function(){
       myUser.set('name', 'Poop');
     }, 5000);
