@@ -11,7 +11,7 @@ app.use(stylus.middleware({
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	res.status(200).sendfile('index.html');
+  res.status(200).sendfile('index.html');
 });
 
 var users = [
