@@ -13,9 +13,7 @@ require.config({
     handlebars: 'bower_components/handlebars/handlebars',
     modernizr: 'bower_components/modernizr/modernizr',
     text: 'bower_components/text/text',
-    css: 'bower_components/css/css',
-    // Modules
-    user: 'modules/user'
+    css: 'bower_components/css/css'
   },
   shim: {
     backbone: {
@@ -31,7 +29,14 @@ require.config({
     modernizr: {
       exports: 'Modernizr'
     }
-  }
+  },
+  packages: [
+    {
+      name: 'user',
+      location: 'modules/user',
+      main: 'user'
+    }
+  ]
 });
 
 // Start app

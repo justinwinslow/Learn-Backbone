@@ -7,8 +7,8 @@ define([
   'underscore',
   'backbone',
 
-  'text!./user.html',
-  'text!modules/users.html'
+  'text!user/edit.html',
+  'text!user/list.html'
 ],
 function($, _, Backbone, editTemplate, listTemplate) {
   // Create object to store the entire module
