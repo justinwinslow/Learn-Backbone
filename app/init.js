@@ -45,6 +45,22 @@ require(
   function ($, _, Backbone, User) {
     var myApp = {};
 
-    var myModel = new User.Model({});
+    var myUsers = new User.Collection(users);
+
+    var myUser = myUsers.findWhere({id: 0});
+
+    var userEditView = new User.view.Edit({model: myUser});
+    var userListView = new User.view.List({collection: myUsers});
+
+    userEditView.render();
+    $('body').append(userEditView.$el);
+    userListView.render();
+    $('body').append(userListView.$el);
+
+    setTimeout(function(){
+      myUser.set('name', 'Poop');
+    }, 5000);
+
+    console.log(myUser, myUsers);
   }
 );

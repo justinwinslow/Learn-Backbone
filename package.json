@@ -4,12 +4,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "jamjs": "",
-    "bower": "",
+    "lodash": "",
     "express": "3.x",
     "requirejs": "2.x",
-    "mocha": "1.x",
-    "chai": "",
     "stylus": ""
   }
 }
