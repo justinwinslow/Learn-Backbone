@@ -1,0 +1,15 @@
+{
+  "name": "jwin-boilerplate",
+  "description": "JWin's Boilerplate",
+  "version": "0.1.0",
+  "dependencies": {
+    "lodash": null,
+    "jquery": null,
+    "modernizr": null,
+    "backbone": null,
+    "text": null,
+    "css": "git@github.com:justinwinslow/css.git",
+    "handlebars": null,
+    "requirejs": null
+  }
+}

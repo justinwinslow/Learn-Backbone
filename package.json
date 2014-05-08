@@ -1,0 +1,15 @@
+{
+  "name": "jwin-boilerplate",
+  "description": "JWin's Boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "jamjs": "",
+    "bower": "",
+    "express": "3.x",
+    "requirejs": "2.x",
+    "mocha": "1.x",
+    "chai": "",
+    "stylus": ""
+  }
+}
