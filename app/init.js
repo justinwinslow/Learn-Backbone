@@ -10,10 +10,7 @@ require.config({
     //underscore: 'bower_components/underscore', I left this as a comment so you can see how aliasing paths can make "upgrades" easier
     underscore: 'bower_components/lodash/dist/lodash',
     backbone: 'bower_components/backbone/backbone',
-    handlebars: 'bower_components/handlebars/handlebars',
-    modernizr: 'bower_components/modernizr/modernizr',
-    text: 'bower_components/text/text',
-    css: 'bower_components/css/css'
+    text: 'bower_components/text/text'
   },
   shim: {
     backbone: {
