@@ -1,7 +1,7 @@
 var express = require('express'),
-		stylus = require('stylus'),
+    stylus = require('stylus'),
     _ = require('lodash'),
-		app = express();
+    app = express();
 
 app.use(stylus.middleware({
   debug: true,
