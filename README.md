@@ -1,7 +1,7 @@
 Learn Backbone
 ===================
 
-This is basically just a playground for boilerplate experimentations. Not recommended for public consumption.
+This is a playground for learning Backbone.js fundamentals.
 
 #### Getting Set Up
 
