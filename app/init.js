@@ -15,7 +15,7 @@ require.config({
     text: 'bower_components/text/text',
     css: 'bower_components/css/css',
     // Modules
-    somemodule: 'modules/module'
+    user: 'modules/user'
   },
   shim: {
     backbone: {
@@ -40,12 +40,11 @@ require(
     'jquery',
     'underscore',
     'backbone',
-    'somemodule'
+    'user'
   ],
-  function ($, _, Backbone, Module) {
+  function ($, _, Backbone, User) {
     var myApp = {};
 
-    myApp.myModule = new Module.view.Main({name: 'My New Module'});
-    console.log(myApp.myModule);
+    var myModel = new User.Model({});
   }
 );
