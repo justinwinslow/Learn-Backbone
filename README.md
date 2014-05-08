@@ -14,7 +14,7 @@ This is basically just a playground for boilerplate experimentations. Not recomm
 
 In the project root run `npm install` to load server dependencies. The server handles serving the app index, basic routing, and compiling the CSS via Stylus.
 
-Next, run `cd app/ && bower install`. This will install client side dependencies.
+Next, run `cd public/app && bower install`. This will install client side dependencies.
 
 #### Running the Server
 
