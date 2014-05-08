@@ -2,11 +2,6 @@
   APP CONFIG & INIT
 */
 
-// Set debug mode [think about modifying this to be dynamic]
-window.debug = true;
-
-if (debug) console.log('init');
-
 // Require config
 require.config({
   paths: {
@@ -45,19 +40,12 @@ require(
     'jquery',
     'underscore',
     'backbone',
-    'handlebars',
     'somemodule'
   ],
-  function ($, _, Backbone, Handlebars, somemodule) {
-    if (debug) console.log($);
-    if (debug) console.log(_);
-    if (debug) console.log(Backbone);
-    if (debug) console.log(Handlebars);
-    if (debug) console.log(somemodule);
+  function ($, _, Backbone, Module) {
+    var myApp = {};
 
-    window.myApp = window.myApp = {};
-
-    myApp.myModule = new somemodule.view.main({name: 'My New Module'});
-    myApp.myModule.trigger('myEvent', {event: 'myEvent'});
+    myApp.myModule = new Module.view.Main({name: 'My New Module'});
+    console.log(myApp.myModule);
   }
 );
