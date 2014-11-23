@@ -6,11 +6,11 @@
 require.config({
   paths: {
     // Libraries
-    jquery: 'bower_components/jquery/dist/jquery',
+    jquery: '../bower_components/jquery/dist/jquery',
     //underscore: 'bower_components/underscore', I left this as a comment so you can see how aliasing paths can make "upgrades" easier
-    underscore: 'bower_components/lodash/dist/lodash',
-    backbone: 'bower_components/backbone/backbone',
-    text: 'bower_components/text/text'
+    underscore: '../bower_components/lodash/dist/lodash',
+    backbone: '../bower_components/backbone/backbone',
+    text: '../bower_components/text/text'
   },
   shim: {
     backbone: {
